@@ -1,7 +1,7 @@
 [
     {
         "id" : 1,
-        "title" : "First Survey",
+        "title" : "First",
         "content" : [
             {
                 "id" : 1,
@@ -43,7 +43,7 @@
     },
     {
         "id" : 2,
-        "title" : "Second Survey",
+        "title" : "Second",
         "content" : [
             {
                 "id" : 1,
@@ -182,7 +182,7 @@
     },
     {
         "id" : 3,
-        "title" : "Third Survey",
+        "title" : "Third",
         "content" : [
             {
                 "id" : 1,
@@ -448,7 +448,7 @@
     },
     {
         "id" : 4,
-        "title" : "Fourth Survey",
+        "title" : "Fourth",
         "content" : [
             {
                 "id" : 1,
@@ -516,7 +516,7 @@
     },
     {
         "id" : 5,
-        "title" : "Fifth Survey",
+        "title" : "Fifth",
         "content" : [
             {
                 "id" : 1,
@@ -541,7 +541,7 @@
     },
     {
         "id" : 6,
-        "title" : "Sixth Survey",
+        "title" : "Sixth",
         "content" : [
             {
                 "id" : 1,
@@ -721,7 +721,7 @@
     },
     {
         "id" : 7,
-        "title" : "Seventh Survey",
+        "title" : "Seventh",
         "content" : [
             {
                 "id" : 1,
@@ -981,7 +981,7 @@
     },
     {
         "id" : 8,
-        "title" : "Eighth Survey",
+        "title" : "Eighth",
         "content" : [
             {
                 "id" : 1,
@@ -1086,7 +1086,7 @@
     },
     {
         "id" : 9,
-        "title" : "Ninth Survey",
+        "title" : "Ninth",
         "content" : [
             {
                 "id" : 1,
