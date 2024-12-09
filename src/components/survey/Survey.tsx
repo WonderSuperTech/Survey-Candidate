@@ -147,18 +147,13 @@ export default function SurveyPages({}: SurveyPagesProps) {
   };
 
   const nextBtnFunction = () => {
-    console.log("------------------ | start | ----------------");
-    console.log("surveyData : ", surveyData);
-    // console.log("pageStatus : ", pageStatus);
-    console.log("answerContent : ", answerContent);
-    // console.log('answerNumber : ', answerNumber);
-    console.log("------------------ | end | ------------------");
-  
     const basicData = surveyData[pageStatus];
     const inputData = answerContent[pageStatus];
+
+    const middelData = surveyData[pageStatus].content;
   
     // Create an array with default "wbtOk" values
-    const tempErrors = new Array(6).fill("wbtOk"); 
+    const tempErrors = new Array(middelData.length).fill("wbtOk"); 
     let hasError = false; // To track if there are errors
   
     basicData.content.forEach((item, index) => {
@@ -234,7 +229,12 @@ export default function SurveyPages({}: SurveyPagesProps) {
   
     // If no errors were found, proceed to the next page
     if (!hasError) {
-      setModalShowStatus(true);
+      if(pageStatus === 0){
+        setPageStatus(pageStatus + 1);
+      }
+      else {
+        setModalShowStatus(true);
+      }
     }
   };
 

@@ -15,7 +15,7 @@ const SurveyGroup = ({
   id,
   surveyData,
   pageStatus,
-  totalErrors,
+totalErrors,
   answerContent,
   handleSetAnswerContent,
 }: SurveyGroupProps) => {
@@ -26,6 +26,7 @@ const SurveyGroup = ({
   
   // Scroll to the first error if there are any errors in the current page
   useEffect(() => {
+    console.log("totalErrors : ", totalErrors);
     const firstErrorIndex = totalErrors.findIndex(error => error !== "wbtOk");
     if (firstErrorIndex !== -1 && itemRefs.current[firstErrorIndex]) {
       itemRefs.current[firstErrorIndex]?.scrollIntoView({ behavior: "smooth", block: "start" });
