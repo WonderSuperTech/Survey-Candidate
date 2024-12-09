@@ -51,6 +51,10 @@ export default function SurveyPages({}: SurveyPagesProps) {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageStatus]);
+
+  useEffect(() => {
     setAnswerContent(Array.from({ length: surveyData.length }, () => []));
   }, [surveyData.length]);
 
@@ -281,7 +285,7 @@ export default function SurveyPages({}: SurveyPagesProps) {
       <div className='style_2'>
         <div className="container_centering">
           <div className="container" style={{ display: 'flex', width: '100%', alignItems: 'center' }}>
-            <div className="row justify-content-end" style={{ width: '100%' }}>
+            <div className="row justify-content-end" style={{ width: '100vw' }}>
               <div className="col-xl-6 col-lg-6 d-flex align-items-center flex-wrap surveyAdd">
                 {
                   pageStatus !== 0 &&
@@ -377,6 +381,11 @@ export default function SurveyPages({}: SurveyPagesProps) {
                   }
                 </div>
                 <div className="StepFlexRow">
+
+                  <div className='result'>
+                    Score : 2 <br />
+                    You have to rest more!
+                  </div>
                   {
                     submitStatus ?
                     (

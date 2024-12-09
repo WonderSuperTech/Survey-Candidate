@@ -13,7 +13,7 @@
     .itemDummyPanelError{
         // box-shadow: red 0px 8px 24px, red 0px 16px 56px, red 0px 24px 80px;
         .dummyErrorMessage {
-            color: red;
+            color:  yellow;
             display: block;
         }
     }
@@ -303,6 +303,8 @@
             background-color: white;
             box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
             padding: 24px 36px;
+            flex-direction: column;
+            display: flex;
             
             h1{
                 color: black;
@@ -333,7 +335,6 @@
                 overflow-x: hidden;
                 background-color: #f1f1f1;
                 border-radius : 8px;
-                max-height: calc(100% - 100px);
 
                 &::-webkit-scrollbar {
                     width : 0
@@ -414,6 +415,36 @@
     .StepFlexRow {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px 0;
+
+        .result {
+            color: black;
+            font-size : 18px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.2;
+        }
+    }
+}
+
+
+
+@media (max-width : 565px){
+    .StepModal {
+        h1{
+            font-size: 20px !important
+        }
+
+        .StepFlexRow {
+            justify-content: center;
+            .result {
+                text-align: center;
+            }
+            .button-24 {
+                margin-right: auto;
+            }
+        }
     }
 }
