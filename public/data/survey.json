@@ -6,88 +6,28 @@
             {
                 "id" : 1,
                 "heading" : "General Question  ",
-                "dataType" : "inputSmallText",
-                "dataTitle" : "Please let me know your name",
-                "required" : true,
-                "dataContent" : [
-                    "John Doe"
-                ],
-                "requiredTrueValue" : "Yes",
-                "errorMessage" : "Please type your name",
-                "answer" : "",
-                "answers" : []
-
-            },
-            {
-                "id" : 2,
-                "heading" : "Please let me know your email address",
-                "dataType" : "inputSmallText",
-                "dataTitle" : "Please let me know your address",
-                "required" : true,
-                "dataContent" : [
-                    "example@gmail.com"
-                ],
-                "requiredTrueValue" : "Yes",
-                "errorMessage" : "Please type your email address",
-                "answer" : "",
-                "answers" : []
-
-            },
-            {
-                "id" : 3,
-                "heading" : "Please choose your gender",
                 "dataType" : "verticalRadio",
-                "dataTitle" : "Please choose your gender",
-                "required" : true,
-                "dataContent" : [
-                    "Male",
-                    "Female",
-                    "Transgender",
-                    "I don't wish to answer"
-                ],
-                "requiredTrueValue" : "Yes",
-                "errorMessage" : "Please choose your gender",
-                "answer" : "",
-                "answers" : []
-
-            },
-            {
-                "id" : 4,
-                "heading" : "Let me know your age",
-                "dataType" : "inputSmallNumber",
-                "dataTitle" : "Let me know your age",
-                "required" : true,
-                "dataContent" : [
-                    "Please type your age"
-                ],
-                "requiredTrueValue" : "Yes",
-                "answer" : "",
-                "answers" : [],
-                "additionalData" : {
-                    "minValue" : 18,
-                    "maxVal" : 100
-                }
-
-            },
-            {
-                "id" : 5,
-                "heading" : "General Question  ",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Do you consent to provide information?",
+                "dataTitle" : "Do you consent to provide information?*",
                 "required" : true,
                 "dataContent" : [
                     "Yes",
                     "No"
-                ],
-                "requiredTrueValue" : "Yes",
-                "answer" : "",
-                "answers" : []
-
+                ]
             },
             {
-                "id" : 6,
+                "id" : 2,
+                "heading" : "Age",
+                "dataType" : "numberInput",
+                "dataTitle" : "Age",
+                "required" : true,
+                "dataContent" : [
+                    "Your answer"
+                ]
+            },
+            {
+                "id" : 3,
                 "heading" : "Occupation",
-                "dataType" : "verticalCheckBox",
+                "dataType" : "verticalRadio",
                 "dataTitle" : "Occupation",
                 "required" : true,
                 "dataContent" : [
@@ -97,9 +37,7 @@
                     "Govt employee",
                     "Corporate Job",
                     "Other"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             }
         ]
     },
@@ -110,7 +48,7 @@
             {
                 "id" : 1,
                 "heading" : "The Epworth Sleepiness Scale (A scale to measure daytime sleepiness)",
-                "dataType" : "verticalRadio",
+                "dataType" : "list",
                 "dataTitle" : "How likely are you to doze off or fall asleep in the following situations? You should rate your chances of dozing off, not just feeling tired. Even if you have not done some of these things recently try to determine how they would have affected you. For each situation, decide whether or not you would have: ",
                 "required" : false,
                 "dataContent" : [
@@ -118,14 +56,12 @@
                     "Slight chance of dozing  =1",
                     "Moderate chance of dozing =2 ",
                     "High chance of dozing  =3 "
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 2,
                 "heading" : "Sitting and Reading ",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Sitting and Reading ",
                 "required" : false,
                 "lowerLimit" : "No chance of dozing",
@@ -135,14 +71,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 3,
                 "heading" : "Watching TV",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Watching TV",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -152,14 +86,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 4,
                 "heading" : "Sitting inactive in public places(eg., a theatre or a meeting)",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Sitting inactive in public places(eg., a theatre or a meeting)",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -169,14 +101,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 5,
                 "heading" : "As a passenger in a car for an hour without a break",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "As a passenger in a car for an hour without a break",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -186,14 +116,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 6,
                 "heading" : "Lying down to rest in the afternoon when circumstances permit",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Lying down to rest in the afternoon when circumstances permit",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -203,14 +131,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 7,
                 "heading" : "Sitting and talking to someone",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Sitting and talking to someone",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -220,14 +146,12 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
             },
             {
                 "id" : 8,
                 "heading" : "Sitting quietly after lunch without alcohol",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "Sitting quietly after lunch without alcohol",
                 "required" : true,
                 "lowerLimit" : "No chance of dozing",
@@ -237,9 +161,22 @@
                     "1",
                     "2",
                     "3"
-                ],
-                "answer" : "",
-                "answers" : []
+                ]
+            },
+            {
+                "id" : 9,
+                "heading" : "In a car, while stopped for a few minutes in traffic",
+                "dataType" : "horizontalRadio",
+                "dataTitle" : "In a car, while stopped for a few minutes in traffic",
+                "required" : true,
+                "lowerLimit" : "No chance of dozing",
+                "upperLimit" : "High chance of dozing ",
+                "dataContent" : [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
             }
         ]
     },
@@ -250,6 +187,14 @@
             {
                 "id" : 1,
                 "heading" : "Pittsburgh Sleep Quality Index (PSQI)",
+                "dataType" : "text",
+                "dataTitle" : "Instructions: The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and nights in the past month. Please answer all questions.",
+                "required" : false,
+                "dataContent" : []
+            },
+            {
+                "id" : 2,
+                "heading" : "During the past month, what time have you usually gone to bed at night?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, what time have you usually gone to bed at night?",
                 "required" : true,
@@ -262,7 +207,7 @@
                 ]
             },
             {
-                "id" : 2,
+                "id" : 3,
                 "heading" : "During the past month, how long (in minutes) has it usually taken you to fall asleep each night?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how long (in minutes) has it usually taken you to fall asleep each night?",
@@ -276,7 +221,7 @@
                 ]
             },
             {
-                "id" : 3,
+                "id" : 4,
                 "heading" : "During the past month, what time have you usually gotten up in the morning?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, what time have you usually gotten up in the morning?",
@@ -291,7 +236,7 @@
                 ]
             },
             {
-                "id" : 4,
+                "id" : 5,
                 "heading" : "During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)",
@@ -308,7 +253,7 @@
                 ]
             },
             {
-                "id" : 5,
+                "id" : 6,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you can't get to sleep within 30 minutes.",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you can't get to sleep within 30 minutes.",
@@ -321,7 +266,7 @@
                 ]
             },
             {
-                "id" : 6,
+                "id" : 7,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you wake up in the middle of the night or early morning",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you wake up in the middle of the night or early morning",
@@ -334,7 +279,7 @@
                 ]
             },
             {
-                "id" : 7,
+                "id" : 8,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you have to get up to use the bathroom",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you have to get up to use the bathroom",
@@ -347,7 +292,7 @@
                 ]
             },
             {
-                "id" : 8,
+                "id" : 9,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you cannot breathe comfortably",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you cannot breathe comfortably",
@@ -360,7 +305,7 @@
                 ]
             },
             {
-                "id" : 9,
+                "id" : 10,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you cough or snore loudly",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you cough or snore loudly",
@@ -373,7 +318,7 @@
                 ]
             },
             {
-                "id" : 10,
+                "id" : 11,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you feel too cold",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you feel too cold",
@@ -386,7 +331,7 @@
                 ]
             },
             {
-                "id" : 11,
+                "id" : 12,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you feel too hot",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you feel too hot",
@@ -399,7 +344,7 @@
                 ]
             },
             {
-                "id" : 12,
+                "id" : 13,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you have bad dreams",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you have bad dreams",
@@ -412,7 +357,7 @@
                 ]
             },
             {
-                "id" : 13,
+                "id" : 14,
                 "heading" : "During the past month, how often have you had more trouble sleeping because you have pain",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had more trouble sleeping because you have pain",
@@ -425,17 +370,17 @@
                 ]
             },
             {
-                "id" : 14,
+                "id" : 15,
                 "heading" : "",
-                "dataType" : "inputSmallText",
-                "dataTitle" : "In a day, how much time do you spend sitting?",
+                "dataType" : "inputText",
+                "dataTitle" : "",
                 "required" : false,
                 "dataContent" : [
                     "Your answer"
                 ]
             },
             {
-                "id" : 15,
+                "id" : 16,
                 "heading" : "During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”)?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”)?",
@@ -448,7 +393,7 @@
                 ]
             },
             {
-                "id" : 16,
+                "id" : 17,
                 "heading" : "During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?",
@@ -461,7 +406,7 @@
                 ]
             },
             {
-                "id" : 17,
+                "id" : 18,
                 "heading" : "During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?",
@@ -474,7 +419,7 @@
                 ]
             },
             {
-                "id" : 18,
+                "id" : 19,
                 "heading" : "During the past month, how would you rate your sleep quality overall?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "During the past month, how would you rate your sleep quality overall?",
@@ -487,7 +432,7 @@
                 ]
             },
             {
-                "id" : 19,
+                "id" : 20,
                 "heading" : "Do you have a bed partner or roommate?",
                 "dataType" : "verticalRadio",
                 "dataTitle" : "Do you have a bed partner or roommate?",
@@ -546,9 +491,9 @@
             },
             {
                 "id" : 4,
-                "heading" : "In a day, how much time do you spend sitting?",
-                "dataType" : "inputSmallText",
-                "dataTitle" : "In a car, while stopped for a few minutes in traffic",
+                "heading" : "",
+                "dataType" : "",
+                "dataTitle" : "",
                 "required" : false,
                 "dataContent" : [
                     "Your answer"
@@ -601,7 +546,7 @@
             {
                 "id" : 1,
                 "heading" : "Perceived Stress Scale",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalList",
                 "dataTitle" : "For each question choose from the following alternatives:",
                 "required" : false,
                 "dataContent" : [
@@ -615,7 +560,7 @@
             {
                 "id" : 2,
                 "heading" : "In the last month, how often have you been upset because of something that  happened unexpectedly?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you been upset because of something that  happened unexpectedly?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -631,7 +576,7 @@
             {
                 "id" : 3,
                 "heading" : "In the last month, how often have you felt that you were unable to control the important things in your life?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt that you were unable to control the important things in your life?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -647,7 +592,7 @@
             {
                 "id" : 4,
                 "heading" : "In the last month, how often have you felt nervous and stressed?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt nervous and stressed?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -663,7 +608,7 @@
             {
                 "id" : 5,
                 "heading" : "In the last month, how often have you felt confident about your ability to handle your personal problems?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt confident about your ability to handle your personal problems?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -679,7 +624,7 @@
             {
                 "id" : 6,
                 "heading" : "In the last month, how often have you felt that things were going your way?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt that things were going your way?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -695,7 +640,7 @@
             {
                 "id" : 7,
                 "heading" : "In the last month, how often have you found that you could not cope with all the things that you had to do?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you found that you could not cope with all the things that you had to do?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -711,7 +656,7 @@
             {
                 "id" : 8,
                 "heading" : "In the last month, how often have you been able to control irritations in your life?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you been able to control irritations in your life?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -727,7 +672,7 @@
             {
                 "id" : 9,
                 "heading" : "In the last month, how often have you felt that you were on top of things?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt that you were on top of things?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -743,7 +688,7 @@
             {
                 "id" : 10,
                 "heading" : "In the last month, how often have you been angered because of things that happened that were outside of your control?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you been angered because of things that happened that were outside of your control?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -759,7 +704,7 @@
             {
                 "id" : 11,
                 "heading" : "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
-                "dataType" : "verticalRadio",
+                "dataType" : "horizontalRadio",
                 "dataTitle" : "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
                 "required" : true,
                 "lowerLimit" : "Never",
@@ -1135,6 +1080,390 @@
                 "dataContent" : [
                     "Female",
                     "Male"
+                ]
+            }
+        ]
+    },
+    {
+        "id" : 9,
+        "title" : "Ninth Survey",
+        "content" : [
+            {
+                "id" : 1,
+                "heading" : "Questionnaire on lifestyle and Medical conditions",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "How easily do you get tired",
+                "required" : true,
+                "dataContent" : [
+                    "After mild physical activity",
+                    "After moderate activity",
+                    "After strenuous activity"
+                ]
+            },
+            {
+                "id" : 2,
+                "heading" : "In the last one year, have you felt shortness of breath?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "In the last one year, have you felt shortness of breath?",
+                "dataSubTitle" : "(eg. after climbing one flight of stairs, or after brisk walking for three to five minutes)",
+                "required" : true,
+                "dataContent" : [
+                    "No",
+                    "Occasionally",
+                    "Regulary"
+                ]
+            },
+            {
+                "id" : 3,
+                "heading" : "In the last one year, did you feel sudden abnormal sweating, nausea or irregular heartbeat?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "In the last one year, did you feel sudden abnormal sweating, nausea or irregular heartbeat?",
+                "required" : true,
+                "dataContent" : [
+                    "No",
+                    "Occasionally",
+                    "Regulary"
+                ]
+            },
+            {
+                "id" : 4,
+                "heading" : "In a day, how much time do you spend sitting?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "In a day, how much time do you spend sitting?",
+                "required" : true,
+                "dataContent" : [
+                    "< 1 hr",
+                    "1-3 hr",
+                    "3-6 hr",
+                    "> 6 hr"
+                ]
+            },
+            {
+                "id" : 5,
+                "heading" : "Do you take medicines to sleep?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you take medicines to sleep?",
+                "required" : true,
+                "dataContent" : [
+                    "No",
+                    "Yes"
+                ]
+            },
+            {
+                "id" : 6,
+                "heading" : "How frequently do you take medicines?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "How frequently do you take medicines?",
+                "required" : true,
+                "dataContent" : [
+                    "Daily",
+                    "Occasionally",
+                    "None"
+                ]
+            },
+            {
+                "id" : 7,
+                "heading" : "What is the duration of exercise per day?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "What is the duration of exercise per day?",
+                "required" : true,
+                "dataContent" : [
+                    "NIL",
+                    "upto 30 mins",
+                    "30 mins",
+                    "more than 30 mins"
+                ]
+            },
+            {
+                "id" : 8,
+                "heading" : "How would you rate the intensity of your exercise?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "How would you rate the intensity of your exercise?",
+                "dataSubTitle" : "((Mild = Leisurely walking ; Moderate = Walking at brisk pace for about 30 mins on a level/Yoga for 30 mins; Strenuous= Jogging for about 30 mins or more))",
+                "required" : true,
+                "dataContent" : [
+                    "Mild",
+                    "Occasionally",
+                    "Strenuous",
+                    "NIL"
+                ]
+            },
+            {
+                "id" : 9,
+                "heading" : "Do you suffer from high blood pressure?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from high blood pressure?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 10,
+                "heading" : "Do you suffer from high blood sugar?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from high blood sugar?",
+                "required" : true,
+                "dataContent" : [
+                    "No",
+                    "Yes",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 11,
+                "heading" : "Do you suffer from high blood cholesterol?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from high blood cholesterol?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 12,
+                "heading" : "Do you suffer from thyroid problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from thyroid problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 13,
+                "heading" : "Do you suffer from neurological disorders?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from neurological disorders?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 14,
+                "heading" : "Do you suffer from heart disorders?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from heart disorders?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 15,
+                "heading" : "Do you suffer from respiratory problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from respiratory problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 16,
+                "heading" : "Do you suffer from liver problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from liver problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 17,
+                "heading" : "Do you suffer from bone/joint problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from bone/joint problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 18,
+                "heading" : "Do you suffer from eye problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from eye problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 19,
+                "heading" : "Do you suffer from gastrointestinal problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from gastrointestinal problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 20,
+                "heading" : "Do you suffer from hearing problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from hearing problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 21,
+                "heading" : "Does your family suffer from kidney problems?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Does your family suffer from kidney problems?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 22,
+                "heading" : "Do you suffer from cancer?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from cancer?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 23,
+                "heading" : "Do you suffer from depression?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from depression?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 24,
+                "heading" : "Do you suffer from anxiety?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from anxiety?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 25,
+                "heading" : "Do you suffer from recurrent infections?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Do you suffer from recurrent infections?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 26,
+                "heading" : "Did you undergo any surgery?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Did you undergo any surgery?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "id" : 27,
+                "heading" : "Please specify",
+                "dataType" : "inputText",
+                "dataTitle" : "Please specify",
+                "required" : false,
+                "dataContent" : [
+                    "Your answer"
+                ]
+            },
+            {
+                "id" : 28,
+                "heading" : "How long since you had surgery ?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "How long since you had surgery ?",
+                "required" : true,
+                "dataContent" : [
+                    "1 yr",
+                    "1-5 yr",
+                    "5-10 yr",
+                    ">10 yr",
+                    "None"
+                ]
+            },
+            {
+                "id" : 29,
+                "heading" : "Does your family suffer from high blood pressure?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Does your family suffer from high blood pressure?",
+                "required" : true,
+                "dataContent" : [
+                    "No",
+                    "Yes",
+                    "Don't Know"
+                ]
+            },
+            {
+                "id" : 30,
+                "heading" : "Who in your family was diagnosed?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Who in your family was diagnosed?",
+                "required" : true,
+                "dataContent" : [
+                    "Father",
+                    "Mother",
+                    "Sibling",
+                    "Child",
+                    "Others",
+                    "None"
+                ]
+            },
+            {
+                "id" : 31,
+                "heading" : "Does your family suffer from high blood sugar?",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "Does your family suffer from high blood sugar?",
+                "required" : true,
+                "dataContent" : [
+                    "Yes",
+                    "No",
+                    "Don't Know"
                 ]
             }
         ]

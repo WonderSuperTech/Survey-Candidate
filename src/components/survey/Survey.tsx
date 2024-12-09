@@ -43,6 +43,7 @@ export default function SurveyPages({}: SurveyPagesProps) {
   const [totalErrors, setTotalErrors] = useState<string[]>([]);
   const [modalShowStatus, setModalShowStatus] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<boolean>(false);
+  const [roommateStatus, setRoommateStatus] = useState<boolean>(true);
 
 
   useEffect(() => {
@@ -161,12 +162,38 @@ export default function SurveyPages({}: SurveyPagesProps) {
   
       if (item.required) {
         // Check for required fields based on type
-        if (item.dataType === "inputSmallText" || item.dataType === "verticalRadio") {
+        if (item.dataType === "inputSmallText") {
           if (!value || value === "") {
             tempErrors[index] = `${item.dataTitle} is required.`;
             hasError = true;
           }
-        } else if (item.dataType === "verticalCheckBox") {
+          else if(item.dataTitle === "Please let me know your address"){
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+            if (!emailRegex.test(value)) {
+              tempErrors[index] = `Please provide a valid email address.`;
+              hasError = true;
+            }
+          }
+        } 
+        if (item.dataType === "verticalRadio") {
+          if (!value || value === "") {
+            tempErrors[index] = `${item.dataTitle} is required.`;
+            hasError = true;
+          }
+          else if (item.dataTitle === "Do you consent to provide information?") {
+            if (value === "No" || value === "") {
+              tempErrors[index] = `You must consent to provide information to proceed.`;
+              hasError = true;
+            }
+          }
+          else if (item.dataTitle === "Do you have a bed partner or roommate?"){
+            if(value === "Not during the past month"){
+              setRoommateStatus(false)
+            }
+          }
+        } 
+        else if (item.dataType === "verticalCheckBox") {
           if (!value || value === "") {
             tempErrors[index] = `${item.dataTitle} is required.`;
             hasError = true;
@@ -177,7 +204,8 @@ export default function SurveyPages({}: SurveyPagesProps) {
               hasError = true;
             }
           }
-        } else if (item.dataType === "inputSmallNumber") {
+        } 
+        else if (item.dataType === "inputSmallNumber") {
           const numberValue = Number(value);
           if (!value || value === "") {
             tempErrors[index] = `${item.dataTitle} is required.`;
@@ -360,7 +388,12 @@ export default function SurveyPages({}: SurveyPagesProps) {
                     (
                       <div className="button-24 button-24-green" onClick={() => {
                         setModalShowStatus(false);
-                        setPageStatus(prev => Math.min(prev + 1, surveyData.length - 1)); // Prevent exceeding total pages
+                        if(roommateStatus){
+                          setPageStatus(pageStatus + 1); // Prevent exceeding total pages
+                        }
+                        else {
+                          setPageStatus(pageStatus + 2); // Prevent exceeding total pages
+                        }
                       }}>
                         Go to Next Step
                       </div>

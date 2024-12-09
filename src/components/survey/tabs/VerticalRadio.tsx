@@ -28,7 +28,7 @@ const VerticalRadio = ({ id, pageStatus, addIndex, index, data, dataType, answer
           <input
             type="radio"
             id={`v${addIndex}delta${pageStatus}ok${id}verticalradio${index}`}
-            name={`question_${id}`} // Change to a unique name for each question
+            name={`v${addIndex}delta${pageStatus}ok${id}verticalradio${index}`} // Change to a unique name for each question
             className="required"
             value={data}
             checked={answerContent[currentPageIndex]?.[currentIndex] === data}

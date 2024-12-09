@@ -341,15 +341,24 @@
 
                 .item {
                     padding : 8px 16px;
-                    margin: 10px 0;
-                    h2 {
+                    margin: 15px 0;
+                    border: 1px dashed dodgerblue;
+                    border-radius: 12px;
+
+                    .content {
                         font-size: 20px;
                         font-style: italic;
-                    }
-                    p{
-                        font-size: 16px;
+                        font-weight: bolder;
+                        color: black;
                         margin: 10px;
                     }
+                    .title {
+                        color: black;
+                        font-weight: normal;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+
                 }
             }
         }
