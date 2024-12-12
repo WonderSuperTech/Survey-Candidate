@@ -7,9 +7,11 @@ import './html/css/style.scss';
 import './html/css/vendors.css';
 import './html/css/custom.css';
 import 'react-toastify/dist/ReactToastify.css';
-
+// import axios from 'axios';
 import { useState, useEffect } from 'react';
 import SurveyGroup from './tabs/SurveyGroup';
+import { set } from 'lodash';
+// import emailjs from 'emailjs-com';
 
 interface ContentItem {
   id: number;
@@ -23,11 +25,13 @@ interface ContentItem {
   lowerLimit?: string;
   upperLimit?: string;
   additionalData?: any;
+  mark: number[];
 }
 
 interface Survey {
   id: number;
   title: string;
+  availableLength: number;
   content: ContentItem[];
 }
 
@@ -44,6 +48,120 @@ export default function SurveyPages({}: SurveyPagesProps) {
   const [modalShowStatus, setModalShowStatus] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<boolean>(false);
   const [roommateStatus, setRoommateStatus] = useState<boolean>(true);
+
+  const markingSymbol = [
+    [],
+    [
+      {
+        milestone : 8,
+        message : "It is unlikely that you are abnormally sleepy."
+      },
+      {
+        milestone : 10,
+        message : "You have an average amount of daytime sleepiness"
+      },
+      {
+        milestone : 16,
+        message : "You may be excessively sleepy depending on the situation. You may want to consider seeking medical attention"
+      },
+      {
+        milestone : 25,
+        message : "You are excessively sleepy and should consider seeking medical attention"
+      },
+    ],
+    [
+      {
+        milestone : 6,
+        message : "It is unlikely that you are abnormally sleepy."
+      },
+      {
+        milestone : 12,
+        message : "You have an average amount of daytime sleepiness"
+      },
+      {
+        milestone : 16,
+        message : "You may be excessively sleepy depending on the situation. You may want to consider seeking medical attention"
+      },
+      {
+        milestone : 22,
+        message : "You are excessively sleepy and should consider seeking medical attention"
+      },
+    ],
+    [
+
+    ],
+    [
+      {
+        milestone : 2,
+        message : "It is unlikely that you are abnormally sleepy."
+      },
+      {
+        milestone : 5,
+        message : "You have an average amount of daytime sleepiness"
+      },
+      {
+        milestone : 8,
+        message : "You may be excessively sleepy depending on the situation. You may want to consider seeking medical attention"
+      },
+      {
+        milestone : 11,
+        message : "You are excessively sleepy and should consider seeking medical attention"
+      },
+    ],
+    [
+      {
+        milestone : 14,
+        message : "low stress"
+      },
+      {
+        milestone : 27,
+        message : "moderate stress"
+      },
+      {
+        milestone : 41,
+        message : "high perceived stress"
+      }
+    ],
+    [
+      {
+        milestone : 31,
+        message : "definitely evening type"
+      },
+      {
+        milestone : 42,
+        message : "moderately evening type"
+      },
+      {
+        milestone : 59,
+        message : "neither type"
+      },
+      {
+        milestone : 70,
+        message : "moderately morning type"
+      },
+      {
+        milestone : 87,
+        message : "definitely morning type"
+      }
+    ],
+  ]
+  
+  // const [formData, setFormData] = useState({
+  //   user_email: '',
+  //   subject: '',
+  //   message: '',
+  // });
+
+  // const sendMail = () => {
+  //   // Replace with your service ID, template ID, and user ID
+  //   emailjs.send('service_k27mpp4', 'template_4h6vb75', formData, '5P0gYHogmOV4OkP8P')
+  //     .then((result) => {
+  //         console.log('Email successfully sent!', result.text);
+  //         setFormData({ user_email: '', subject: '', message: '' }); // Reset form
+  //     }, (error) => {
+  //         console.log('Failed to send email. Error:', error.text);
+  //     });
+  // };
 
 
   useEffect(() => {
@@ -132,23 +250,20 @@ export default function SurveyPages({}: SurveyPagesProps) {
       });
       }
     }
-    
-
-    // console.log("------------------ | start | ----------------");
-    // console.log("currentPageIndex : ", currentPageIndex);
-    // console.log("currentIndex : ", currentIndex);
-    // console.log("newValue : ", newValue);
-    // console.log("pageItem : " , pageItem);
-    // console.log("answerContent : ", answerContent);
-    // console.log('answerNumber : ', answerNumber);
-    // console.log('previousValue : ', previousValue);
-    // console.log("------------------ | end | ----------------");
-
   };
 
   const nextBtnFunction = () => {
     const basicData = surveyData[pageStatus];
     const inputData = answerContent[pageStatus];
+    // let emailText:string = "";
+
+    console.log("========== | start | ==========");
+
+
+    console.log("basic data", basicData);
+    console.log("answer data", inputData);
+
+    console.log("========== | end | ==========");
 
     const middelData = surveyData[pageStatus].content;
   
@@ -169,6 +284,7 @@ export default function SurveyPages({}: SurveyPagesProps) {
           else if(item.dataTitle === "Please let me know your address"){
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+            // emailText = value;
             if (!emailRegex.test(value)) {
               tempErrors[index] = `Please provide a valid email address.`;
               hasError = true;
@@ -233,10 +349,100 @@ export default function SurveyPages({}: SurveyPagesProps) {
         setPageStatus(pageStatus + 1);
       }
       else {
+
+        scoringFunction(basicData, inputData);
+
         setModalShowStatus(true);
       }
     }
   };
+
+  const [scoreNumber, setScoreNumber] = useState<number>(0);
+  const [scoreMessage, setScoreMessage] = useState<string>("");
+  
+
+  const scoringFunction = (basicData:Survey , inputData:any) => {
+    
+    console.log("------------- | start | ---------------");
+
+    console.log("basic data", basicData);
+    console.log("answer data", inputData);
+    
+    console.log("------------- | end | ---------------");
+
+    let score:number = 0;
+
+    if(pageStatus === 2){
+
+      let tempArray:number[] = [];
+
+      basicData.content.forEach((item:any, index:number) => {
+        tempArray.push(item.mark[item.dataContent.indexOf(inputData[index])]);
+      })
+
+      score += tempArray[17];
+      score += Math.ceil((tempArray[1] + tempArray[4]) / 2);
+
+      score += (8 - tempArray[3]);
+
+      let temp3:number = tempArray[3] * 100 / (tempArray[2] - tempArray[0]);
+
+      if(temp3 > 75 && temp3 < 85) {
+        score += 1;
+      }
+      else if (temp3 > 65 && temp3 < 75) {
+        score += 2;
+      }
+      else if (temp3 < 65) {
+        score += 3;
+      }
+
+      let temp4:number = 0;
+      for(let i = 0; i < 9; i ++) {
+        temp4 += tempArray[5 + i];
+      }
+      score += Math.ceil(temp4 / 9);
+
+      score += tempArray[14];
+
+      score += Math.ceil((tempArray[15] + tempArray[16]) / 2);
+
+    }
+    else {
+      basicData.content.forEach((itemDummy:ContentItem, itemDummyIndex:number) => {
+  
+        const userAnswer = inputData[itemDummyIndex];
+  
+        if(itemDummy.mark && itemDummy.mark.length > 0) {
+          itemDummy.dataContent.forEach((answer: string, answerIndex:number) => {
+            if(answer === userAnswer){
+              score += itemDummy.mark[answerIndex];
+            }
+          });
+        }
+      });
+  
+      if(markingSymbol[pageStatus] && markingSymbol[pageStatus].length > 0) {
+        markingSymbol[pageStatus].forEach((data:any) => {
+            if(score <= data.milestone){
+              setScoreMessage(data.message);
+            }
+            else {
+              return;
+            }
+          })
+      }
+    }
+
+
+    console.log("score : ", score);
+
+    setScoreNumber(score);
+
+    return;
+
+  }
+
 
   const submitFunction = () => {
     setSubmitStatus(true);
@@ -306,9 +512,9 @@ export default function SurveyPages({}: SurveyPagesProps) {
                 </div>
                 {pageStatus !== 0 && (
                   <div className="progressBarContainer">
-                    <div className="progressBar" style={{ width: ((answerNumber[pageStatus] === undefined ? 0 : answerNumber[pageStatus]) * 100 / surveyData[pageStatus].content.length) + '%' }}>
+                    <div className="progressBar" style={{ width: ((answerNumber[pageStatus] === undefined ? 0 : answerNumber[pageStatus]) * 100 / surveyData[pageStatus].availableLength) + '%' }}>
                       <div className="numberPanel">
-                        {`${answerNumber[pageStatus] === undefined ? 0 : answerNumber[pageStatus]} of `}{surveyData[pageStatus].content.length}
+                        {`${answerNumber[pageStatus] === undefined ? 0 : answerNumber[pageStatus]} of `}{surveyData[pageStatus].availableLength}
                       </div>
                     </div>
                   </div>
@@ -382,10 +588,17 @@ export default function SurveyPages({}: SurveyPagesProps) {
                 </div>
                 <div className="StepFlexRow">
 
-                  <div className='result'>
-                    Score : 2 <br />
-                    You have to rest more!
-                  </div>
+                  
+
+                  {
+                    scoreNumber != 0 &&
+
+                      <div className='result'>
+                        Score : {scoreNumber} <br />
+                        {scoreMessage}
+                      </div>
+                  }
+
                   {
                     submitStatus ?
                     (
@@ -402,6 +615,7 @@ export default function SurveyPages({}: SurveyPagesProps) {
                         }
                         else {
                           setPageStatus(pageStatus + 2); // Prevent exceeding total pages
+                          setRoommateStatus(true);
                         }
                       }}>
                         Go to Next Step

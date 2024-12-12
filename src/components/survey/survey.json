@@ -2,6 +2,7 @@
     {
         "id" : 1,
         "title" : "First Survey",
+        "availableLength" : 0,
         "content" : [
             {
                 "id" : 1,
@@ -15,7 +16,8 @@
                 "requiredTrueValue" : "Yes",
                 "errorMessage" : "Please type your name",
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
 
             },
             {
@@ -30,7 +32,8 @@
                 "requiredTrueValue" : "Yes",
                 "errorMessage" : "Please type your email address",
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
 
             },
             {
@@ -48,7 +51,8 @@
                 "requiredTrueValue" : "Yes",
                 "errorMessage" : "Please choose your gender",
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
 
             },
             {
@@ -66,7 +70,8 @@
                 "additionalData" : {
                     "minValue" : 18,
                     "maxVal" : 100
-                }
+                },
+                "mark" : []
 
             },
             {
@@ -81,7 +86,8 @@
                 ],
                 "requiredTrueValue" : "Yes",
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
 
             },
             {
@@ -99,18 +105,20 @@
                     "Other"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
             }
         ]
     },
     {
         "id" : 2,
         "title" : "Second Survey",
+        "availableLength" : 7,
         "content" : [
             {
                 "id" : 1,
                 "heading" : "The Epworth Sleepiness Scale (A scale to measure daytime sleepiness)",
-                "dataType" : "verticalRadio",
+                "dataType" : "list",
                 "dataTitle" : "How likely are you to doze off or fall asleep in the following situations? You should rate your chances of dozing off, not just feeling tired. Even if you have not done some of these things recently try to determine how they would have affected you. For each situation, decide whether or not you would have: ",
                 "required" : false,
                 "dataContent" : [
@@ -120,7 +128,8 @@
                     "High chance of dozing  =3 "
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : []
             },
             {
                 "id" : 2,
@@ -137,7 +146,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 3,
@@ -154,7 +169,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 4,
@@ -171,7 +192,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 5,
@@ -188,7 +215,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 6,
@@ -205,7 +238,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 7,
@@ -222,7 +261,13 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             },
             {
                 "id" : 8,
@@ -239,13 +284,20 @@
                     "3"
                 ],
                 "answer" : "",
-                "answers" : []
+                "answers" : [],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
             }
         ]
     },
     {
         "id" : 3,
         "title" : "Third Survey",
+        "availableLength" : 19,
         "content" : [
             {
                 "id" : 1,
@@ -254,11 +306,18 @@
                 "dataTitle" : "During the past month, what time have you usually gone to bed at night?",
                 "required" : true,
                 "dataContent" : [
-                    "8:00 – 10:00 PM",
-                    "10:00 - 11:00 PM",
-                    "11:00 PM - 12:00 AM",
-                    "12:00 - 2:00 AM",
+                    "8:00PM",
+                    "10:00PM",
+                    "11:00PM",
+                    "12:00PM",
                     "after 2:00 AM"
+                ],
+                "mark" : [
+                    8,
+                    10,
+                    11,
+                    12,
+                    14
                 ]
             },
             {
@@ -268,11 +327,16 @@
                 "dataTitle" : "During the past month, how long (in minutes) has it usually taken you to fall asleep each night?",
                 "required" : true,
                 "dataContent" : [
-                    "10 - 15",
-                    "15 - 30",
-                    "30 - 45",
-                    "45 - 60",
+                    "less than 15 mins",
+                    "16 - 30",
+                    "31 - 60",
                     "more than 60 mins"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -282,12 +346,18 @@
                 "dataTitle" : "During the past month, what time have you usually gotten up in the morning?",
                 "required" : true,
                 "dataContent" : [
-                    "Before 5:00 am",
-                    "5:00 - 6:30 am",
-                    "6:30 - 7:45 am",
-                    "7:45 - 9:45 am",
-                    "9:45 - 11:00 am",
-                    "After 11:00 am"
+                    "5:00 am",
+                    "6:00 am",
+                    "8:00 am",
+                    "10:00 am",
+                    "11:00 am"
+                ],
+                "mark" : [
+                    17,
+                    18,
+                    20,
+                    22,
+                    23
                 ]
             },
             {
@@ -297,14 +367,16 @@
                 "dataTitle" : "During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)",
                 "required" : true,
                 "dataContent" : [
-                    "less than 4 hours",
-                    "4 - 5 hours",
+                    "less than 5 hours",
                     "5 - 6 hours",
                     "6 - 7 hours",
-                    "7 - 8 hours",
-                    "8 - 9 hours",
-                    "9 - 10 hours",
-                    "more than 10 hours"
+                    "more than 7 hours"
+                ],
+                "mark" : [
+                    5,
+                    6,
+                    7,
+                    8
                 ]
             },
             {
@@ -318,6 +390,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -331,6 +409,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -344,6 +428,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -357,6 +447,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -370,6 +466,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -383,6 +485,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -396,6 +504,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -409,6 +523,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -422,16 +542,31 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
                 "id" : 14,
-                "heading" : "",
-                "dataType" : "inputSmallText",
-                "dataTitle" : "In a day, how much time do you spend sitting?",
-                "required" : false,
+                "heading" : "During the past month, how often have you had more trouble sleeping because other reason(s), please describe",
+                "dataType" : "verticalRadio",
+                "dataTitle" : "During the past month, how often have you had more trouble sleeping because other reason(s), please describe",
+                "required" : true,
                 "dataContent" : [
-                    "Your answer"
+                    "Not during the past month",
+                    "Less than once a week",
+                    "Once or twice a week",
+                    "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -445,6 +580,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -458,6 +599,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -471,6 +618,12 @@
                     "Only a very slight problem",
                     "Somewhat of a problem",
                     "A very big problem"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -484,6 +637,12 @@
                     "Fairly good",
                     "Fairly bad",
                     "Very bad"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             },
             {
@@ -497,6 +656,12 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times in a week"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3
                 ]
             }
         ]
@@ -504,6 +669,7 @@
     {
         "id" : 4,
         "title" : "Fourth Survey",
+        "availableLength" : 5,
         "content" : [
             {
                 "id" : 1,
@@ -516,7 +682,8 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
-                ]
+                ],
+                "mark" : []
             },
             {
                 "id" : 2,
@@ -529,7 +696,8 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
-                ]
+                ],
+                "mark" : []
             },
             {
                 "id" : 3,
@@ -542,7 +710,8 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
-                ]
+                ],
+                "mark" : []
             },
             {
                 "id" : 4,
@@ -552,7 +721,8 @@
                 "required" : false,
                 "dataContent" : [
                     "Your answer"
-                ]
+                ],
+                "mark" : []
             },
             {
                 "id" : 5,
@@ -565,13 +735,15 @@
                     "Less than once a week",
                     "Once or twice a week",
                     "Three or more times a week"
-                ]
+                ],
+                "mark" : []
             }
         ]
     },
     {
         "id" : 5,
         "title" : "Fifth Survey",
+        "availableLength" : 1,
         "content" : [
             {
                 "id" : 1,
@@ -590,18 +762,31 @@
                     "Sleepy, but some effort to keep awake",
                     "Very sleepy, great effort to keep awake, fighting sleep",
                     "Extremely sleepy, can't keep awake"
+                ],
+                "mark" : [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
                 ]
             }
         ]
     },
     {
         "id" : 6,
-        "title" : "Sixth Survey",
+        "title" : "Sixth",
+        "availableLength" : 10,
         "content" : [
             {
                 "id" : 1,
                 "heading" : "Perceived Stress Scale",
-                "dataType" : "verticalRadio",
+                "dataType" : "list",
                 "dataTitle" : "For each question choose from the following alternatives:",
                 "required" : false,
                 "dataContent" : [
@@ -626,6 +811,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -642,6 +834,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -658,6 +857,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -674,6 +880,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -690,6 +903,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -706,6 +926,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -722,6 +949,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -738,6 +972,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -754,6 +995,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -770,6 +1018,13 @@
                     "2",
                     "3",
                     "4"
+                ],
+                "mark" : [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             }
         ]
@@ -777,6 +1032,7 @@
     {
         "id" : 7,
         "title" : "Seventh Survey",
+        "availableLength" : 19,
         "content" : [
             {
                 "id" : 1,
@@ -791,6 +1047,14 @@
                     "9:45 - 11:00 am",
                     "11:00 - 12:00 pm",
                     "12:00 pm - 5:00 pm"
+                ],
+                "mark" : [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -806,6 +1070,14 @@
                     "12:30 - 1:45 am",
                     "1:45 - 3:00 am",
                     "3:00 am - 8:00 pm"
+                ],
+                "mark" : [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
                 ]
             },
             {
@@ -819,6 +1091,12 @@
                     "Slightly dependent",
                     "Fairly dependent",
                     "Very dependent"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -832,6 +1110,12 @@
                     "Not very easy",
                     "Fairly easy",
                     "Very easy"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -845,6 +1129,12 @@
                     "Slightly alert",
                     "Fairly alert",
                     "Very alert"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -858,6 +1148,12 @@
                     "Slightly hungry",
                     "Fairly hungry",
                     "Very hungry"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -871,6 +1167,12 @@
                     "Fairly tired",
                     "Fairly refreshed",
                     "Very refreshed"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -884,6 +1186,12 @@
                     "Less than one hour later",
                     "1-2 hours later",
                     "More than two hours later"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -897,6 +1205,12 @@
                     "Would be in reasonable form",
                     "Would find it difficult",
                     "Would find it very difficult"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -911,6 +1225,13 @@
                     "10:15 PM – 12:45 AM",
                     "12:45 – 2:00 AM",
                     "2:00 – 3:00 AM"
+                ],
+                "mark" : [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -924,6 +1245,12 @@
                     "11:00 AM – 1:00 PM",
                     "3:00 PM – 5:00 PM",
                     "7:00 PM – 9:00 PM"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -937,6 +1264,12 @@
                     "A little tired",
                     "Fairly tired",
                     "Very tired"
+                ],
+                "mark" : [
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -950,6 +1283,12 @@
                     "Will wake up at usual time and will doze thereafter",
                     "Will wake up at usual time but will fall asleep again",
                     "Will NOT wake up until later than usual"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -964,6 +1303,13 @@
                     "Would take a good sleep before and nap after",
                     "Would sleep only before watch"
                 ]
+                ,
+                "mark" : [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
             },
             {
                 "id" : 15,
@@ -976,6 +1322,12 @@
                     "11:00 AM – 1:00 PM",
                     "3:00 PM – 5:00 PM",
                     "7:00 PM – 9:00 PM"
+                ],
+                "mark" : [
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -989,6 +1341,12 @@
                     "Would be in reasonable form",
                     "Would find it difficult",
                     "Would find it very difficult"
+                ],
+                "mark" : [
+                    1,
+                    2,
+                    3,
+                    4
                 ]
             },
             {
@@ -1003,6 +1361,13 @@
                     "5 hours starting between 9:00 AM and 2:00 PM",
                     "5 hours starting between 2:00 PM and 5:00 PM",
                     "5 hours starting between 5:00 PM and 4:00 AM"
+                ],
+                "mark" : [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -1017,6 +1382,13 @@
                     "10:00 AM – 5:00 PM",
                     "5:00 – 10:00 PM",
                     "10:00 PM – 5:00 AM"
+                ],
+                "mark" : [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
                 ]
             },
             {
@@ -1030,111 +1402,12 @@
                     "Rather more a “morning” than an “evening” type",
                     "Rather more an “evening” than a “morning” type",
                     "Definitely an “evening” type"
-                ]
-            }
-        ]
-    },
-    {
-        "id" : 8,
-        "title" : "Eighth Survey",
-        "content" : [
-            {
-                "id" : 1,
-                "heading" : "Stop Bang",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Do you snore loudly?",
-                "required" : true,
-                "dataContent" : [
-                    "Yes",
-                    "No"
-                ]
-            },
-            {
-                "id" : 2,
-                "heading" : "Do you often feel tired, fatigued, or sleepy during the daytime?",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Do you often feel tired, fatigued, or sleepy during the daytime?",
-                "required" : true,
-                "dataContent" : [
-                    "Yes",
-                    "No"
-                ]
-            },
-            {
-                "id" : 3,
-                "heading" : "Has anyone observed you stop breathing during sleep?",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Has anyone observed you stop breathing during sleep?",
-                "required" : true,
-                "dataContent" : [
-                    "Yes",
-                    "No"
-                ]
-            },
-            {
-                "id" : 4,
-                "heading" : "Do you have (or are you being treated for) high blood pressure?",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Do you have (or are you being treated for) high blood pressure?",
-                "required" : true,
-                "dataContent" : [
-                    "Yes",
-                    "No"
-                ]
-            },
-            {
-                "id" : 5,
-                "heading" : "Do you often feel tired, fatigued, or sleepy during the daytime?",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Do you often feel tired, fatigued, or sleepy during the daytime?",
-                "required" : true,
-                "dataContent" : [
-                    "Yes",
-                    "No"
-                ]
-            },
-            {
-                "id" : 6,
-                "heading" : "BMI - The formula for BMI is weight in kilograms divided by height in meters squared",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "The formula for BMI is weight in kilograms divided by height in meters squared",
-                "required" : true,
-                "dataContent" : [
-                    "≤35kg/m2",
-                    "> 35kg/m2"
-                ]
-            },
-            {
-                "id" : 7,
-                "heading" : "Age",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Age",
-                "required" : true,
-                "dataContent" : [
-                    "",
-                    ""
-                ]
-            },
-            {
-                "id" : 8,
-                "heading" : "Neck circumference",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Neck circumference",
-                "required" : true,
-                "dataContent" : [
-                    "≤40cm",
-                    "> 40cm"
-                ]
-            },
-            {
-                "id" : 9,
-                "heading" : "Gender",
-                "dataType" : "verticalRadio",
-                "dataTitle" : "Gender",
-                "required" : true,
-                "dataContent" : [
-                    "Female",
-                    "Male"
+                ],
+                "mark" : [
+                    6,
+                    4,
+                    2,
+                    0
                 ]
             }
         ]

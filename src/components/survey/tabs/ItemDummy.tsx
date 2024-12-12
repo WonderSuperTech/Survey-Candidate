@@ -89,11 +89,9 @@ const ItemDummy = ({
                 key={index}
                 data={item}
                 dataType={dataType}
-                id={id.toString()}
                 index={index.toString() + "zzz"}
                 pageStatus={pageStatus.toString()}
                 addIndex={addIndex.toString()}
-                answerContent={answerContent}
                 handleSetAnswerContent={handleSetAnswerContent}
               />
             );

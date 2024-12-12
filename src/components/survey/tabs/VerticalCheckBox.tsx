@@ -1,16 +1,13 @@
-import { useEffect } from "react"
 interface VerticalCheckBoxProps{
-    id : string,
     index : string,
     data : string,
     pageStatus : string,
     addIndex : string;
     dataType: string;
-    answerContent: any[];
     handleSetAnswerContent: (newValue: any, currentPageIndex: number, currentIndex: number, dataType: string) => void;
 }
 
-const VerticalCheckBox = ({id,pageStatus,addIndex, index, data, dataType, answerContent, handleSetAnswerContent}:VerticalCheckBoxProps) => {
+const VerticalCheckBox = ({pageStatus,addIndex, index, data, dataType, handleSetAnswerContent}:VerticalCheckBoxProps) => {
     
 
     const currentPageIndex = parseInt(pageStatus);
@@ -19,12 +16,6 @@ const VerticalCheckBox = ({id,pageStatus,addIndex, index, data, dataType, answer
     const handleVerticalCheckBox = () => {
         handleSetAnswerContent(index, currentPageIndex, currentIndex, dataType);
     }
-
-    useEffect(() => {
-        console.log("answerContent : ", answerContent, id);
-    }, []);
-
-
     
     return (
         <li>
