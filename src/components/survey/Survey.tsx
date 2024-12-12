@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 // import axios from 'axios';
 import { useState, useEffect } from 'react';
 import SurveyGroup from './tabs/SurveyGroup';
-import { set } from 'lodash';
 // import emailjs from 'emailjs-com';
 
 interface ContentItem {
