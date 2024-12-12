@@ -143,6 +143,20 @@ export default function SurveyPages({}: SurveyPagesProps) {
         message : "definitely morning type"
       }
     ],
+    [
+      {
+        milestone : 3,
+        message : "High risk for moderate to severe OSA"
+      },
+      {
+        milestone : 5,
+        message : "Intermediate risk for moderate to severe OSA"
+      },
+      {
+        milestone : 9,
+        message : "High risk for moderate to severe OSA"
+      }
+    ]
   ]
   
   // const [formData, setFormData] = useState({
@@ -168,7 +182,7 @@ export default function SurveyPages({}: SurveyPagesProps) {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.getElementsByClassName('container_centering')[0].scrollTo(0, 0);
   }, [pageStatus]);
 
   useEffect(() => {
